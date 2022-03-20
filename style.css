@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+#page-looder{
+    width: 150px;
+    height: 150px;
+
+}
+#page-looder circle{
+    fill: none;
+    stroke-width: 10;
+
+}
+#page-looder circle:nth-child(1){
+    stroke: #ffc114;
+    stroke-dasharray: 50;
+}
+#page-looder circle:nth-child(2){
+    stroke: #928d7d;
+    stroke-dasharray: 100;
+}
+#page-looder circle:nth-child(3){
+    stroke: #49463f;
+    stroke-dasharray: 180;
+}
+#page-looder circle:nth-child(4){
+    stroke: #323099;
+    stroke-dasharray: 350;
+    stroke-dashoffset: -100;
+}
+@keyframes looder{
+    50%{
+        transform: rotate(360deg);
+
+    }
+}
+#page-looder circle{
+    animation-name: looder;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+}
+#page-looder circle:nth-child(1){
+    animation-delay: -.2s;
+}
+#page-looder circle:nth-child(2){
+    animation-delay: -.4s;
+}
+#page-looder circle:nth-child(3){
+    animation-delay: -.6s;
+}
+#page-looder circle:nth-child(4){
+    animation-delay: -.8s;
+}
